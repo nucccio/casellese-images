@@ -1,0 +1,304 @@
+/* Globale Stile und Reset */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Basiseinstellung für alle Überschriften beibehalten */
+h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+/* 1. H1: Inter Bold */
+h1 {
+    font-weight: 700; /* Oder das Schlüsselwort 'bold' */
+}
+
+/* 2. H2: Inter Medium */
+h2 {
+    font-weight: 500; /* Medium */
+}
+
+/* 3. H3: Inter Regular */
+h3 {
+    font-weight: 400; /* Regular */
+}
+
+a {
+    text-decoration: none;
+    color: #CC3333; /* Roter Link-Text */
+}
+
+/* 1. Header/Navigation Bar */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    font-size: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); /* Leichter Schatten für Tiefe */
+}
+
+.logo img {
+    /* Basierend auf der Optik der Vorlage wählen wir eine passende Größe */
+    height: 70px; 
+    width: auto; /* Behält das Seitenverhältnis bei */
+    display: block; /* Für bessere Steuerung */
+    padding-top: 5px; /* Ein kleiner Abstand, um es leicht nach unten zu verschieben */
+}
+
+.main-nav a {
+    margin-left: 20px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #e54c4c;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon-img {
+    height: 28px; /* Oder die gewünschte Größe */
+    width: auto;
+    margin-right: 15px; /* Abstand zum Anmelden-Button beibehalten */
+    cursor: pointer; /* Zeigt an, dass es klickbar ist */
+}
+
+/* 1. Button-Stil (mit Flexbox für Anordnung) */
+.btn-anmelden {
+    /* Flexbox für Anordnung */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 8px; /* Abstand zwischen Icon und Text */
+    
+    /* Behält die Optik des Buttons bei */
+    background-color: #e54c4c;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #e54c4c;
+}
+
+/* 2. Stil für das neue Icon-Bild */
+.anmelden-icon {
+    height: 25px; /* Definiert die Größe des Icons */
+    width: auto;
+    display: block;
+}
+
+/* 2. Hero Section */
+.hero-section {
+    /* Simuliert das Hintergrundbild des Dorfes */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('banner.webp');
+    background-size: cover;
+    background-position: center;
+    height: 450px; /* Höhe wie im Originalbild */
+    display: flex;
+    align-items: flex-end; /* Inhalt unten ausrichten */
+    padding: 40px 10%;
+    color: #fff;
+    position: relative;
+}
+Ohne linear gradient
+.hero-overlay {
+    max-width: 600px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: #fff;
+    /*text-shadow: 2px 2px 4px rgba(0,0,0,0.5);*/
+}
+
+.btn-mehr {
+    position: absolute;
+    bottom: 40px;
+    right: 10%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* 3. Icon/Feature Section */
+.feature-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 80px; /* Keine Überlappung mit Hero-Sektion */
+    padding: 0 50px;
+    position: relative;
+    z-index: 10; /* Stellen Sie sicher, dass sie über dem Hero-Bild liegt */
+}
+
+.feature-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    max-width: 300px;
+    min-height: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card h3 {
+    color: #e54c4c;
+    margin-top: 5px;
+}
+
+.feature-card p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* 4. Main Content Section (Top-Rezepte) */
+.main-content {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.main-content h2 {
+    font-size: 50px;
+    margin-bottom: -20px;
+}
+
+.sub-heading {
+    margin-bottom: 80px;
+    color: #666;
+    font-size: 20px;
+}
+
+.recipe-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.recipe-image-placeholder {
+    width: 400px;
+    height: 180px;
+    margin-right: 20px;
+    border-radius: 5px;
+    /*background-color: #ccc;*/
+    /* ÄNDERUNG: Stellt sicher, dass das gesamte Bild im Container sichtbar ist */
+    background-size: contain; 
+    background-repeat: no-repeat; /* Wichtig, damit das Bild nicht gekachelt wird */
+    /*background-position: center;*/
+}
+
+/* Spezifische Platzhalterfarben (für mehr visuellen Bezug) */
+.img-caciocavallo { background-image: url('caciocavallo.webp'); }
+.img-salsiccia { background-image: url('salsiccia.webp');  }
+.img-brot { background-image: url('brot.webp');  }
+
+.recipe-details {
+    flex-grow: 1;
+    position: relative;
+    padding-right: 50px; /* Platz für den Pfeil */
+}
+
+.recipe-details h3 {
+    color: #e54c4c;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.recipe-details p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.recipe-details strong {
+    font-weight: bold;
+}
+
+.recipe-link {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #e54c4c;
+    font-weight: lighter;
+    transition: transform 0.2s;
+}
+
+.recipe-card:hover .recipe-link {
+    transform: translateY(-50%) translateX(5px);
+}
+
+/* 5. Footer/CTA Section */
+.cta-banner {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cta-logo {
+    font-family: 'Georgia', serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #e54c4c;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #e54c4c;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 6. Bottom Footer */
+.bottom-footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.bottom-footer a {
+    color: #333;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.bottom-footer a:hover {
+    color: #e54c4c;
+}
